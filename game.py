@@ -20,30 +20,35 @@ def WholeGame(option, lists):
     while(tie_flag == True):
 
         if retry == True:
-            retry = False
+            #retry = False
             newOption = PlayGame()
-            WholeGame(newOption, lists)
-        if computer_choice == option:
-            print("Tie play again")
-            newOption = PlayGame()
-            WholeGame(newOption,lists)
-        
-        
-        elif (computer_choice == "scissors" and option == "paper") :
-            retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing" )
-            print(retry)
-            retry = True
-        elif (computer_choice == "rock" and option== "scissors"):
-            retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing" )
-            print(retry)
-            retry = True
-        elif (computer_choice == "paper" and option == "rock"):
-            retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing" )
-            print(retry)
-            retry = True
+            if (WholeGame(newOption, lists) == True):
+                quit()
+
         else:
-            print("You win!")
-            tie_flag = False
+            if computer_choice == option:
+                print("Tie play again")
+                retry = True
+        
+        
+            elif (computer_choice == "scissors" and option == "paper") :
+                retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing " )
+                print(retry)
+                retry = True
+            elif (computer_choice == "rock" and option== "scissors"):
+                retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing " )
+                print(retry)
+                retry = True
+            elif (computer_choice == "paper" and option == "rock"):
+                retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing " )
+                
+                print(retry)
+                retry = True
+            else:
+                print("You win!")
+                tie_flag = False
+                return True
+        
     
 
             
