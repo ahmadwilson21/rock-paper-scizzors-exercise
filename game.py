@@ -11,32 +11,34 @@ def PlayGame():
     
 
 
-def WholeGame(option, list):
+def WholeGame(option, lists):
 
-    computer_choice = random.choice(list)
+    computer_choice = random.choice(lists)
     print("Your opponent chose " + computer_choice + " ")
     tie_flag = True
     retry = False
     while(tie_flag == True):
 
         if retry == True:
-            retry == False
-            option == PlayGame()
+            retry = False
+            newOption = PlayGame()
+            WholeGame(newOption, lists)
         if computer_choice == option:
             print("Tie play again")
-            option = PlayGame()
+            newOption = PlayGame()
+            WholeGame(newOption,lists)
         
         
         elif (computer_choice == "scissors" and option == "paper") :
-            retry = input("Sorry you lost press any key to continue playing ")
+            retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing" )
             print(retry)
             retry = True
         elif (computer_choice == "rock" and option== "scissors"):
-            retry = input("Sorry you lost press any key to continue playing ")
+            retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing" )
             print(retry)
             retry = True
         elif (computer_choice == "paper" and option == "rock"):
-            retry = input("Sorry you lost press any key to continue playing ")
+            retry = input("Sorry you lost your opponent chose " + computer_choice+" press any key to continue playing" )
             print(retry)
             retry = True
         else:
