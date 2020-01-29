@@ -4,7 +4,7 @@ def PlayGame():
 
     user_choice = (input("Please choose either 'rock', 'paper', or 'scissors':  "))
     while (user_choice.lower() != "rock" and user_choice.lower() != "paper" and user_choice.lower() != "scissors") :
-        print("Try again")
+        print("\nTry again\n")
         user_choice = (input("Please choose either 'rock', 'paper', or 'scissors':  "))
     print("You chose: " + user_choice)
     return user_choice.lower()
