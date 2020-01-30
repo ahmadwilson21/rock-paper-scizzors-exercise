@@ -16,9 +16,9 @@ def WholeGame(option, lists):
     computer_choice = random.choice(lists)
     print("The computer chose " + computer_choice + " ")
     print("-------------------")
-    tie_flag = True
-    retry = False
-    while(tie_flag == True):
+    #tie_flag = True
+    #retry = False
+    #while(tie_flag == True):
 
 
 
@@ -33,34 +33,34 @@ def WholeGame(option, lists):
        #        quit()
 
         #else:
-        if computer_choice == option:
-            print("Tie play again")
-            tie_flag = False
-            #retry = True
+    if computer_choice == option:
+        print("Tie play again")
+        #tie_flag = False
+        #retry = True
+
+
+    elif (computer_choice == "scissors" and option == "paper") :
+        print("Oh, the computer won. It's ok.")
+        #tie_flag = False
+        #print(retry)
+        #retry = True
+    elif (computer_choice == "rock" and option== "scissors"):
+        print("Oh, the computer won. It's ok." )
+        #tie_flag = False
+        #print(retry)
+        #retry = True
+    elif (computer_choice == "paper" and option == "rock"):
+        print ("Oh, the computer won. It's ok." )
+        #tie_flag = False
+        #print(retry)
+        #retry = True
+    else:
+        print("You win!")
+        #tie_flag = False
+        #return True
     
-    
-        elif (computer_choice == "scissors" and option == "paper") :
-            print("Oh, the computer won. It's ok.")
-            tie_flag = False
-            #print(retry)
-            #retry = True
-        elif (computer_choice == "rock" and option== "scissors"):
-            print("Oh, the computer won. It's ok." )
-            tie_flag = False
-            #print(retry)
-            #retry = True
-        elif (computer_choice == "paper" and option == "rock"):
-            print ("Oh, the computer won. It's ok." )
-            tie_flag = False
-            #print(retry)
-            #retry = True
-        else:
-            print("You win!")
-            tie_flag = False
-            #return True
-        
-        print("-------------------")
-        print("Thanks for playing. Please play again!\n")
+    print("-------------------")
+    print("Thanks for playing. Please play again!\n")
     
 
             
